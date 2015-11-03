@@ -51,6 +51,7 @@ public class DrawActivity extends AppCompatActivity {
         displayMessage();
     }
 
+    // get data from bundle
     public void extractBundleData() {
         // get bundle
         bundle = getIntent().getExtras();
@@ -67,6 +68,7 @@ public class DrawActivity extends AppCompatActivity {
         rect2_bottom = bundle.getInt("rect2_bottom");
     }
 
+    // display intersection, containment, or adjacency message
     public void displayMessage() {
         switch (choice) {
             case 1:
@@ -93,7 +95,7 @@ public class DrawActivity extends AppCompatActivity {
         }
     }
 
-    // if any part of either rectangle is within the boundaries of the other rectangle, return true
+    // if the interior of both rectangles intersect, or overlap, return true
     public boolean doIntersect(Rect rect1, Rect rect2) {
 
         int x1 = rect1.left;
@@ -106,13 +108,13 @@ public class DrawActivity extends AppCompatActivity {
         int w2 = rect2.right - rect2.left;
         int h2 = rect2.bottom - rect2.top;
 
-        if(x1+w1 < x2 || x2+w2 < x1 || y1+h1 < y2 || y2+h2 < y1) {
+        if(x1+w1 <= x2 || x2+w2 <= x1 || y1+h1 <= y2 || y2+h2 <= y1) {
             return false;
         }
         return true;
     }
 
-    // if either rectangle is wholly within the boundaries of the other rectangle, return true
+    // if the interior of either rectangle is wholly within the boundaries of the other rectangle, return true
     public boolean areContained(Rect rect1, Rect rect2) {
 
         int w1 = rect1.right - rect1.left;
@@ -141,6 +143,7 @@ public class DrawActivity extends AppCompatActivity {
         }
     }
 
+    // if either rectangle shares a side (proper or sub-line, return true
     public boolean areAdjacent(Rect rect1, Rect rect2) {
 
         if(rect1.left == rect2.left || rect1.right==rect2.right || rect1.right == rect2.left || rect1.left == rect2.right) {

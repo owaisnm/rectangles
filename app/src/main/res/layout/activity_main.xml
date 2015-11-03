@@ -1,0 +1,215 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+        <include
+            android:id="@+id/toolbar_main"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Rectangle 1"
+            android:paddingTop="20dp"
+            android:textSize="20sp"
+            android:layout_weight="0.5"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="0.5">
+
+            <EditText
+                android:id="@+id/xml_rect1_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="left"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/xml_rect1_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="top"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/xml_rect1_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="right"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/xml_rect1_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="bottom"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="Rectangle 2"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_weight="0.5"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            >
+
+            <EditText
+                android:id="@+id/xml_rect2_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="left"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/xml_rect2_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="top"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/xml_rect2_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="right"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/xml_rect2_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="bottom"
+                android:digits="0123456789"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:gravity="center_vertical">
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="2dp"
+                card_view:cardBackgroundColor="@color/md_green_500"
+                card_view:contentPadding="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/xml_intersection_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="20sp"
+                    android:text="INTERSECTION"
+                    android:gravity="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="2dp"
+                card_view:cardBackgroundColor="@color/md_green_500"
+                card_view:contentPadding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/xml_contained_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="20sp"
+                    android:text="CONTAINMENT"
+                    android:gravity="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="2dp"
+                card_view:cardBackgroundColor="@color/md_green_500"
+                card_view:contentPadding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/xml_adjacent_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="20sp"
+                    android:text="ADJACENCY"
+                    android:gravity="center"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
